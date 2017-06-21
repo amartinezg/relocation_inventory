@@ -1,0 +1,51 @@
+<h3><%= "#{@box.id} - #{@box.title}" %></h3>
+<div class="row">
+  <div class="col-lg-4">
+    <div class="panel panel-default">
+       <div class="panel-body">
+          <div class="text-info">QR Code</div>
+          <div class="text-center pv-xl">
+            <img src=<%= image_path @box.qrcode_url %> alt=""  />
+          </div>
+       </div>
+       <div class="panel-footer">
+          <p class="text-muted">
+             <em class="fa fa-upload fa-fw"></em>
+             <span><%= @box.title %></span>
+          </p>
+       </div>
+    </div>
+  </div>
+  <div class="col-lg-8">
+    <div class="panel b">
+       <table class="table bb">
+          <tbody>
+             <tr>
+                <td>
+                   <strong>Title</strong>
+                </td>
+                <td><%= @box.title %></td>
+             </tr>
+             <tr>
+                <td>
+                   <strong>Content</strong>
+                </td>
+                <td><%= @box.content.html_safe %></td>
+             </tr>
+             <tr>
+                <td>
+                   <strong>Processed?</strong>
+                </td>
+                <td><%= @box.processed %></td>
+             </tr>
+          </tbody>
+       </table>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4">
+    <a href="/" class="mb-sm btn btn-primary" role="button">List of boxes</a>
+  </div>
+</div>
+

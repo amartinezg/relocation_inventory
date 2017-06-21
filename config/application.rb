@@ -22,7 +22,7 @@ module Angle
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    
+
     # setup bower components folder for lookup
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
     # fonts
@@ -59,6 +59,7 @@ module Angle
                                  'blog.js',
                                  'ecommerce.js',
                                  'forum.js',
+                                 'boxes.js',
                                  # Stylesheets
                                  'charts.css',
                                  'dashboard.css',
@@ -73,7 +74,8 @@ module Angle
                                  'widgets.css',
                                  'blog.css',
                                  'ecommerce.css',
-                                 'forum.css'
+                                 'forum.css',
+                                 'boxes.css'
                                 ]
 
 
