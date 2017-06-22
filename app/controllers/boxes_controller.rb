@@ -4,12 +4,19 @@ class BoxesController < ApplicationController
   end
 
   def create
-    @box = Box.create!(box_params)
-    @box.update_attributes(qrcode_url: "qr_codes/#{@box.id}.png")
-    redirect_to @box
+    @box = Box.new(box_params)
+    if @box.save
+      redirect_to @box
+    else
+      flash.now[:error] = @box.errors.full_messages
+      render action: "new"
+    end
   end
 
   def update
+    @box = Box.find(params[:id])
+    @box.update_attributes(processed: params[:processed])
+    redirect_to @box
   end
 
   def edit

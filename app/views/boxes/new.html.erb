@@ -3,6 +3,10 @@
     <div class="panel panel-default">
       <div class="panel-heading">NEW BOX</div>
       <div class="panel-body">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg.first, class: "alert alert-info" %>
+        <% end %>
+
          <%= form_for @box do |f| %>
            <fieldset>
               <div class="form-group">
@@ -132,7 +136,6 @@
 <script>
 function myFunction() {
   $("#box_content").val($('#content').html());
-  debugger;
   $("#new_box").submit();
 }
 </script>

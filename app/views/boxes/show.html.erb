@@ -38,6 +38,22 @@
                 </td>
                 <td><%= @box.processed %></td>
              </tr>
+             <tr>
+                <td>
+                   <strong>Created at</strong>
+                </td>
+                <td><%= @box.created_at %></td>
+             </tr>
+             <tr>
+                <td>
+                </td>
+                <td>
+                  <%= form_tag box_path(@box, processed: true), method: :put do %>
+                    <%= hidden_field_tag :box_id, @box.id %>
+                    <%= submit_tag 'Process!', class: "mb-sm btn btn-sm btn-danger" -%>
+                  <% end %>
+                </td>
+             </tr>
           </tbody>
        </table>
     </div>
