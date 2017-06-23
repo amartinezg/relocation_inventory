@@ -1,7 +1,0 @@
-development:
-  access_key_id: AKIAI6HJXIJEJ55NLYFA
-  secret_access_key: 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
-
-production:
-  access_key_id: AWS_ACCESS_KEY_ID
-  secret_access_key: AWS_SECRET_KEY_ID
