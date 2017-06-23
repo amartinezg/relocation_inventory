@@ -28,7 +28,8 @@
         "GRID_MASONRY": "Grilla Masonry",
         "TYPO": "Tipografia",
         "FONT_ICON": "Iconos",
-        "WEATHER_ICON": "Iconos de clima"
+        "WEATHER_ICON": "Iconos de clima",
+        "BOXES": "Cajas"
       },
       "form": {
         "FORM": "Formularios",

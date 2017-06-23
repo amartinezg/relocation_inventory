@@ -28,7 +28,8 @@
         "GRID_MASONRY": "Grid Masonry",
         "TYPO": "Typography",
         "FONT_ICON": "Font Icons",
-        "WEATHER_ICON": "Weather Icons"
+        "WEATHER_ICON": "Weather Icons",
+        "BOXES": "Boxes"
       },
       "form": {
         "FORM": "Forms",
