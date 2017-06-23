@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/widgets' => 'widgets#index'
 
   get 'dashboard/dashboard_v1'
+  get '/api/i18n/:locale' => 'api#i18n'
 
   # the rest goes to root
   get '*path' => redirect('/')

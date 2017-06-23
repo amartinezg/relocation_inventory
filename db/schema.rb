@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170621155604) do
+ActiveRecord::Schema.define(version: 20170623163248) do
 
   create_table "boxes", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.string "qrcode_url"
     t.boolean "processed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "qr_file_name"
+    t.string "qr_content_type"
+    t.integer "qr_file_size"
+    t.datetime "qr_updated_at"
   end
 
 end
