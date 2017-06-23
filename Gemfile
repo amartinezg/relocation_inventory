@@ -9,9 +9,6 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.0'
 
-# HEROKU doesn't support sqlite3.
-# Comment this gem
-gem 'sqlite3'
 # and uncomment the following
 # gem 'pg'
 # gem 'thin'
@@ -51,11 +48,18 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13.0'
   gem 'selenium-webdriver'
+  # HEROKU doesn't support sqlite3.
+  # Comment this gem
+  gem 'sqlite3'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
